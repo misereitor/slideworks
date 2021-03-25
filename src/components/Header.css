@@ -1,0 +1,35 @@
+header {
+    background-color: rgb(56, 56, 56);
+    color: aliceblue;
+    height: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1100px;
+}
+
+.header h2 {
+    margin: auto 30px;
+    display: flex;
+    padding-top: 8px;
+}
+
+.header button {
+   margin: auto 20px;
+   background-color: #aaaaaa; 
+   border: none;
+   border-radius: 5px;
+   padding: 5px 10px;
+   margin-top: 12px;
+   transition: all .3s;
+}
+
+.header button:hover {
+    background-color: #f1eeeec9; 
+    padding: 7px 12px;
+    margin-top: 10px;
+}

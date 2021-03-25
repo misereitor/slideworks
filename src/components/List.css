@@ -1,0 +1,35 @@
+.page {
+    min-height: calc(100vh - 130px);
+}
+
+.page h2 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.lists {
+    display: flex;
+    margin: auto;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+.list {
+    margin: 30px auto;
+    min-width: 350px;
+    border: solid 1.3px;
+    border-radius: 5px;
+    padding: 25px;
+    max-height: 500px;
+}
+
+.list p {
+    border-bottom: solid 1.3px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import App from './App';
+import Register from './Pages/Register/Register'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/' component={App}></Route>
+      <Route exact path='/register' component={Register}></Route>
+    </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
