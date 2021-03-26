@@ -5,7 +5,7 @@ function Header () {
     return (
         <header>
             <div className="header">
-                <h2>Crie seu perfil profissional</h2>
+                <h2 className="title">Crie seu perfil profissional</h2>
                 <div className="links">
                     <Link to='/'>
                         <button>Home</button>

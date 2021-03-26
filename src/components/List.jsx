@@ -16,7 +16,7 @@ function List () {
 
     return (
         <div className="page">
-            <h2>Candidatos cadastrados</h2>
+            <h2 className="page-title">Candidatos cadastrados</h2>
             <section className="lists">
                 {formList.map((item, key) => (
                     <div key={key} className="list">{item.map((list, key) => (

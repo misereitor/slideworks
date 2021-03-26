@@ -6,20 +6,19 @@ header {
 
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     margin: auto;
     max-width: 1100px;
 }
 
-.header h2 {
-    margin: auto 30px;
-    display: flex;
+.header h2.title {
+    margin-top: auto;
+    text-align: center;
     padding-top: 8px;
 }
 
 .header button {
-   margin: auto 20px;
+   margin: auto 10px;
    background-color: #aaaaaa; 
    border: none;
    border-radius: 5px;

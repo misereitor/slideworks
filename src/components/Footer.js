@@ -3,7 +3,7 @@ function Footer () {
     return (
         <footer>
             <div>
-                <h3>Boa sorte na sua jornada de trabalho</h3>
+                <h3>Boa sorte na sua jornada de trabalho!</h3>
             </div>
         </footer>
     )

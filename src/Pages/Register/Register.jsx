@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import addListAction from '../../Services/controllers/addListController'
+import './Register.css'
 
 class Register extends React.Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Register extends React.Component {
             descricao: '',
             estadoCivil: '',
             cargo: '',
-            habididades: ''
+            habilidades: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,14 +24,25 @@ class Register extends React.Component {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
-
         this.setState({
             [name]: value
         });
     }
 
+    clear () {
+        this.setState({
+            nome: '',
+            email: '',
+            descricao: '',
+            estadoCivil: '',
+            cargo: '',
+            habilidades: ''
+        })
+    }
+
     handleSubmit (event) {
         addListAction(this.state)
+        this.clear()
         event.preventDefault()
     }
 
@@ -46,64 +58,72 @@ class Register extends React.Component {
                         <div className="register-form">
                             <form onSubmit={this.handleSubmit}>
                                 <label>
-                                    Nome:
+                                    Nome
                                 <input
                                         type="text"
                                         name="nome"
                                         required
-                                        checked={this.state.isGoing}
+                                        value={this.state.nome}
+                                        checked={this.state.nome}
                                         onChange={this.handleInputChange} />
                                 </label>
                                 <br />
                                 <label>
-                                    E-mail:
+                                    E-mail
                                 <input
                                         type="email"
                                         name="email"
                                         required
-                                        checked={this.state.isGoing}
+                                        value={this.state.email}
+                                        checked={this.state.email}
                                         onChange={this.handleInputChange} />
                                 </label>
                                 <br />
                                 <label>
-                                    Descrição:
+                                    Descrição
                                 <textarea
                                         name="descricao"
-                                        checked={this.state.isGoing}
+                                        value={this.state.descricao}
+                                        checked={this.state.descricao}
                                         onChange={this.handleInputChange} />
                                 </label>
                                 <br />
                                 <label>
-                                    Estado civil:
-                                <input
+                                    Estado civil
+                                    <select name="estadoCivil" value={this.state.estadoCivil} onChange={this.handleInputChange} required>
+                                        <option value="">__________________</option>
+                                        <option value="solteiro">solteiro(a)</option>
+                                        <option value="casado">casado(a)</option>
+                                        <option value="Divorciado">Divorciado(a)</option>
+                                        <option value="Viúvo">Viúvo(a)</option>
+                                        <option value="Separado judicialmente">Viúvo(a)</option>
+                                    </select>
+                                </label>
+                                <br />
+                                <label>
+                                    Cargo
+                                    <select name="cargo" value={this.state.cargo} onChange={this.handleInputChange} required>
+                                        <option value="">__________________</option>
+                                        <option value="Desenvolvedor front-end">Desenvolvedor front-end</option>
+                                        <option value="Desenvolvedor back-end">Desenvolvedor back-end</option>
+                                        <option value="Desenvolvedor full stack">Desenvolvedor full stack</option>
+                                    </select>
+                                </label>
+                                <br />
+                                <label>
+                                    Habilidades
+                                    <input
+                                        placeholder="Separar por virgula"
+                                        label="Separe por virgula"
                                         type="text"
-                                        name="estadoCivil"
+                                        name="habilidades"
                                         required
-                                        checked={this.state.isGoing}
+                                        value={this.state.habilidades}
+                                        checked={this.state.habilidades}
                                         onChange={this.handleInputChange} />
                                 </label>
                                 <br />
-                                <label>
-                                    Cargos:
-                                <input
-                                        type="text"
-                                        name="cargo"
-                                        required
-                                        checked={this.state.isGoing}
-                                        onChange={this.handleInputChange} />
-                                </label>
-                                <br />
-                                <label>
-                                    Habididades:
-                                <input
-                                        type="text"
-                                        name="habididades"
-                                        required
-                                        checked={this.state.isGoing}
-                                        onChange={this.handleInputChange} />
-                                </label>
-                                <br />
-                                <label>
+                                <label className="submit">
                                     <input type="submit" value="Enviar" />
                                 </label>
                             </form>

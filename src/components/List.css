@@ -2,7 +2,7 @@
     min-height: calc(100vh - 130px);
 }
 
-.page h2 {
+.page h2.page-title {
     text-align: center;
     margin: 30px auto;
 }
@@ -13,17 +13,24 @@
     max-width: 900px;
     flex-wrap: wrap;
 }
+
 .list {
-    margin: 30px auto;
+    margin: 30px auto 30px 20px;
     min-width: 350px;
-    border: solid 1.3px;
-    border-radius: 5px;
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     padding: 25px;
     max-height: 500px;
+    transition: .3s;
+    background-color: rgb(236, 236, 236);
+}
+
+.list:hover {
+    box-shadow: 0 7px 30px rgba(0, 0, 0, 0.5);
 }
 
 .list p {
-    border-bottom: solid 1.3px;
+    border-bottom: solid 2px #CCC;
     margin-bottom: 10px;
     line-height: 30px;
     max-width: 350px;
