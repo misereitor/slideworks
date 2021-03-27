@@ -11,3 +11,9 @@ footer {
 footer h3 {
     padding: 15px 0 0 0;
 }
+
+@media (max-width:410px) {
+  footer h3 {
+        font-size: 15px;
+    }
+}

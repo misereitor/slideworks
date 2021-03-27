@@ -57,3 +57,56 @@ textarea {
     background-color: rgb(153, 153, 153);
     color: rgb(46, 46, 46);
 }
+
+@media (max-width:700px) {
+    form {
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media (max-width:500px) {
+    form {
+        width: 300px;
+        margin: auto;
+    }
+
+    input, textarea, select {
+        font-size:16px;
+        width:250px;
+    }
+
+    select {
+        width: 280px;
+    }
+
+    .register-header {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:300px) {
+    form {
+        width: 200px;
+        margin: auto;
+    }
+
+    input, textarea, select {
+        font-size:14px;
+        width:160px;
+    }
+
+    select {
+        width: 200px;
+    }
+
+    .register-header {
+        font-size: 18px;
+    }
+    .submit input {
+        padding: 10px 5px;
+        width: 80px;
+        font-size: 20px;
+        transition: .3s;
+    }
+}

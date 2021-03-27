@@ -9,14 +9,15 @@
 
 .lists {
     display: flex;
+    justify-content: center;
     margin: auto;
     max-width: 900px;
     flex-wrap: wrap;
 }
 
 .list {
-    margin: 30px auto 30px 20px;
-    min-width: 350px;
+    margin: 30px auto 30px auto;
+    width: 350px;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 25px;
@@ -44,4 +45,11 @@
 .list h2 {
     text-align: center;
     margin-bottom: 30px;
+}
+
+@media (max-width:400px) {
+    .list {
+        width: 250px;
+        padding: 20px;
+    }
 }
