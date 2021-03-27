@@ -1,5 +1,5 @@
 import './App.css';
-import List from './components/List'
+import Lists from './components/Lists'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
@@ -8,7 +8,7 @@ function App () {
   return (
     <div className="page">
       <Header />
-      <List />
+      <Lists />
       <Footer />
     </div>
   );

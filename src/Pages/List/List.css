@@ -1,42 +1,33 @@
-.page {
-    min-height: calc(100vh - 130px);
-}
-
-.page h2.page-title {
-    text-align: center;
-    margin: 30px auto;
-}
-
-.lists {
+.list-page {
     display: flex;
     margin: auto;
     max-width: 900px;
     flex-wrap: wrap;
+    min-height: calc(100vh - 100px);
 }
 
-.list {
-    margin: 30px auto 30px 20px;
+.list-one {
+    margin: 30px auto;
     min-width: 350px;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 25px;
-    max-height: 500px;
     transition: .3s;
     background-color: rgb(236, 236, 236);
 }
 
-.list:hover {
+.list-one:hover {
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.5);
 }
 
-.list p {
+.list-one h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.list-one p {
     border-bottom: solid 2px #CCC;
     margin-bottom: 10px;
     line-height: 30px;
     max-width: 350px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
 }
