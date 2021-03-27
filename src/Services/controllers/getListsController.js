@@ -1,17 +1,26 @@
 import BasicFetch from '../api.js'
 
 const getAllList = async () => {
+
     const allLists = await BasicFetch(
         `/boards/${process.env.REACT_APP_API_IDBOARD}/lists?fields&key=${process.env.REACT_APP_API_KEY}&token=${process.env.REACT_APP_API_TOKEN}`,
         {
             method: 'get'
+        }).then(response => {
+            return response
         })
-    let lists = []
-    allLists.forEach(async (element, id) => {
-        const list = await BasicFetch(`/lists/${element.id}/cards?fields=name,desc&key=${process.env.REACT_APP_API_KEY}&token=${process.env.REACT_APP_API_TOKEN}`)
-        lists.push([id, list])
+    const lists = await allLists.map(async (element, id) => {
+        const list = await BasicFetch(`/lists/${element.id}/cards?fields=name,desc&key=${process.env.REACT_APP_API_KEY}&token=${process.env.REACT_APP_API_TOKEN}`,
+            {
+                method: 'get'
+            })
+        return ([id, list])
+
     })
-    return lists
+    const promiseList = Promise.allSettled(lists).then((response) => {
+        return response
+    })
+    return promiseList
 }
 
 export default getAllList

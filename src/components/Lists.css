@@ -5,6 +5,7 @@
 .page h2.page-title {
     text-align: center;
     margin: 30px auto;
+    font-size: 35px;
 }
 
 .lists {
@@ -47,9 +48,18 @@
     margin-bottom: 30px;
 }
 
+.list a,.list h3,.list p {
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+
+
 @media (max-width:400px) {
     .list {
         width: 250px;
         padding: 20px;
+    }
+    .page h2.page-title {
+        font-size: 25px;
     }
 }

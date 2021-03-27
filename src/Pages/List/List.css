@@ -4,16 +4,19 @@
     max-width: 900px;
     flex-wrap: wrap;
     min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
 }
 
 .list-one {
     margin: 30px auto;
-    width: 350px;
+    width: 400px;
     box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 25px;
     transition: .3s;
     background-color: rgb(236, 236, 236);
+    max-height: 650px;
 }
 
 .list-one:hover {
@@ -30,6 +33,11 @@
     margin-bottom: 10px;
     line-height: 30px;
     max-width: 350px;
+}
+
+h3, p {
+    text-decoration: none;
+    color: rgb(36, 36, 36);
 }
 
 @media (max-width:400px) {

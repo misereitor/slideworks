@@ -12,10 +12,10 @@ function List () {
     let list = []
     useEffect(() => {
         const loadAll = async () => {
-            const list = await getAllList()
-            setTimeout(() => {
-                setFormList(list)
-            }, 1000)
+            const allList = await getAllList()
+            let list = []
+            allList.forEach((el) => list.push(el.value))
+            setFormList(list)
         }
         loadAll()
     }, [])
